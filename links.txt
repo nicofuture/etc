@@ -1,0 +1,31 @@
+//add in head tag
+
+<link rel="stylesheet" href="https://seekingmaya.github.io/etc-content/loading.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/104/three.js"></script>
+<script src="https://seekingmaya.github.io/etc-content/GLTFLoaderCompressed.js"></script>
+<script src="https://seekingmaya.github.io/etc-content/OrbitControlsCompressed.js"></script>
+
+<script src="https://seekingmaya.github.io/etc-content/sketch/sketch.min.js"></script>
+
+
+//add in body tag
+<script src="https://seekingmaya.github.io/etc-content/3dmodel.js"></script>
+
+<script src="https://seekingmaya.github.io/etc-content/sketch/drawing.js"></script>
+
+
+add in custom html
+///////
+
+
+<div style="height: 100%;height: 100%;" class="canvas"></div>
+<div class="loading">
+    <div class="loading__text">
+    loading
+    </div>
+    <div class="loading__dots">
+    <div class="loading__dot loading__dot--one"></div>
+    <div class="loading__dot loading__dot--two"></div>
+    <div class="loading__dot loading__dot--three"></div>
+    </div>
+</div>
