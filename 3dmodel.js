@@ -107,13 +107,31 @@ class Viewer {
     this.activeCamera.updateProjectionMatrix();
     this.renderer.setSize(clientWidth, clientHeight);
 
-    if (clientWidth < 768) {
-      this.defaultCamera.zoom = 2;
-      this.defaultCamera.updateProjectionMatrix();
-    } else if (clientWidth < 1025) {
-      this.defaultCamera.zoom = 5;
-      this.defaultCamera.updateProjectionMatrix();
+    if (this.content) {
+      const box = new THREE.Box3().setFromObject(this.content);
+      const size = box.getSize(new THREE.Vector3());
+      const maxDim = Math.max(size.x, size.y, size.z);
+      const fov = this.activeCamera.fov * (Math.PI / 180);
+
+      var coeff = 0.8;
+
+      let cameraZ =
+        maxDim / coeff / Math.tan((fov * this.activeCamera.aspect) / 2);
+
+      console.log(cameraZ);
+
+      this.activeCamera.position.z = cameraZ;
+
+      this.activeCamera.updateProjectionMatrix();
     }
+
+    // if (clientWidth < 768) {
+    //   this.defaultCamera.zoom = 2;
+    //   this.defaultCamera.updateProjectionMatrix();
+    // } else if (clientWidth < 1025) {
+    //   this.defaultCamera.zoom = 5;
+    //   this.defaultCamera.updateProjectionMatrix();
+    // }
 
     this.render();
   }
@@ -156,22 +174,22 @@ class Viewer {
     object.position.x += object.position.x - center.x;
     object.position.y += object.position.y - center.y;
     object.position.z += object.position.z - center.z;
-    object.rotation.y += Math.PI;
+    object.rotation.y -= Math.PI / 2;
 
     this.controls.maxDistance = size * 10;
-    this.defaultCamera.near = size / 100;
-    this.defaultCamera.far = size * 100;
+    this.defaultCamera.near = 0.1;
+    this.defaultCamera.far = 1000;
     this.defaultCamera.updateProjectionMatrix();
 
     this.defaultCamera.position.copy(center);
-    this.defaultCamera.position.x = -20;
+    this.defaultCamera.position.x = 0;
     this.defaultCamera.position.y = 0;
     this.defaultCamera.position.z = 0;
 
     this.content = object;
 
     this.setCamera(center);
-    this.activeCamera.lookAt(center);
+    this.activeCamera.lookAt(this.content);
 
     // this.controls.saveState();
     this.controls.object = this.activeCamera;
@@ -180,7 +198,7 @@ class Viewer {
 
     this.scene.add(this.content);
     console.log(this.scene, "scene");
-    this.activeCamera.zoom = 5;
+    this.activeCamera.zoom = 1;
     this.scene.add(this.activeCamera);
 
     this.updateTextureEncoding();
