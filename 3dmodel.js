@@ -42,7 +42,7 @@ class Viewer {
     this.scene = new THREE.Scene();
     // this.scene.background = new THREE.Color(0xffffff);
 
-    const fov = 60;
+    const fov = 45;
     this.defaultCamera = new THREE.PerspectiveCamera(
       fov,
       el.clientWidth / el.clientHeight,
