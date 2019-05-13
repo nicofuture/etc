@@ -113,7 +113,7 @@ class Viewer {
       const maxDim = Math.max(size.x, size.y, size.z);
       const fov = this.activeCamera.fov * (Math.PI / 180);
 
-      var coeff = 1.7;
+      var coeff = 1;
 
       let cameraZ =
         maxDim / coeff / Math.tan((fov * this.activeCamera.aspect) / 2);
