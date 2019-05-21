@@ -286,6 +286,6 @@ let el = document.querySelector(".canvas");
 let viewer = new Viewer(el);
 
 viewer
-  .load("https://seekingmaya.github.io/etc-content/assets/model.glb")
+  .load("https://d1w166w3qr099y.cloudfront.net/YEEZY3D")
   .catch(e => console.log(e))
   .then(gltf => console.log("Done ", gltf));
