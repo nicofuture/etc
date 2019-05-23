@@ -1,4 +1,4 @@
-var COLOURS = ["#FFD590", "#FFFFFF", "#D8EBA7", "#868E80"];
+var COLOURS = ["#F0C240", "#FFFFFF", "#D8EBA7", "#868E80"];
 var radius = 0;
 Sketch.create({
   container: document.getElementById("drawing"),
