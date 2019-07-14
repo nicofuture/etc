@@ -1,0 +1,36 @@
+//add in head tag
+
+<script src="https://seekingmaya.github.io/etc-content/waveform/pace.min.js"></script>
+<script src="https://seekingmaya.github.io/etc-content/waveform/pace-setup.js"></script>
+<script src="https://seekingmaya.github.io/etc-content/waveform/p5.min.js"></script>
+<script src="https://seekingmaya.github.io/etc-content/waveform/p5.dom.js"></script>
+<script src="https://seekingmaya.github.io/etc-content/waveform/p5.sound.js"></script>
+
+
+//add in body tag
+
+<script src="https://seekingmaya.github.io/etc-content/waveform/waveform.js"></script>
+
+//add custom html element
+
+<div class="waveform" id="waveform">
+    <div class="waveform__play">
+    <svg
+        version="1.1"
+        x="0px"
+        y="0px"
+        viewBox="0 0 96 96"
+        style="enable-background:new 0 0 96 96;"
+        xml:space="preserve"
+    >
+        <g id="XMLID_2_">
+        <path
+            id="XMLID_4_"
+            class="st0"
+            d="M74.3,49.2L23,77.7c-0.6,0.3-1.1,0.4-1.5,0.1c-0.4-0.3-0.6-0.7-0.6-1.4V19.6
+            c0-0.7,0.2-1.1,0.6-1.4c0.4-0.3,0.9-0.2,1.5,0.1l51.3,28.5c0.6,0.3,0.9,0.7,0.9,1.2S74.9,48.9,74.3,49.2z"
+        />
+        </g>
+    </svg>
+    </div>
+</div>

@@ -8,7 +8,19 @@
 <script src="https://seekingmaya.github.io/etc-content/sketch/sketch.min.js"></script>
 
 
+<script src="https://seekingmaya.github.io/etc-content/waveform/pace.min.js"></script>
+<script src="https://seekingmaya.github.io/etc-content/waveform/pace-setup.js"></script>
+<script src="https://seekingmaya.github.io/etc-content/waveform/p5.min.js"></script>
+<script src="https://seekingmaya.github.io/etc-content/waveform/p5.dom.js"></script>
+<script src="https://seekingmaya.github.io/etc-content/waveform/p5.sound.js"></script>
+
+
 //add in body tag
+
+<script src="https://seekingmaya.github.io/etc-content/waveform/waveform.js"></script>
+
+
+
 <script src="https://seekingmaya.github.io/etc-content/3dmodel.js"></script>
 
 <script src="https://seekingmaya.github.io/etc-content/sketch/drawing.js"></script>
