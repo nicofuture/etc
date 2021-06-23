@@ -1,4 +1,4 @@
-var COLOURS = ["#rgba(227, 83, 255, 0.5)", "#FFFFFF", "#D8EBA7", "#868E80"];
+var COLOURS = ["rgba(227, 83, 255, 0.5)", "#FFFFFF", "#D8EBA7", "#868E80"];
 var radius = 0;
 
 var containers = document.querySelectorAll(".drawing");
