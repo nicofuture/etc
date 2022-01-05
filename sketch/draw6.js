@@ -1,4 +1,4 @@
-var COLOURS = ["#BAE4F8", "#FFFFFF", "#D8EBA7", "#868E80"];
+var COLOURS = ["#FF5F1F", "#BAE4F8", "#FF5F1F", "#868E80"];
 var radius = 0;
 
 var containers = document.querySelectorAll(".drawing");
